@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
         }
 
         body {
-            background-color: #0f172a; /* Changed from light green to match main dark theme */
+            background-color: #0f172a; 
             color: #f8fafc;
             overflow-x: hidden;
             scroll-behavior: smooth;
@@ -35,7 +35,7 @@
         }
 
         .intro-container h1 {
-            font-size: 4rem; /* Scaled down slightly for default/desktop */
+            font-size: 4rem; 
             line-height: 1.1;
             margin-bottom: 20px;
             font-family: 'Times New Roman', serif;
@@ -117,7 +117,6 @@
             margin-bottom: 0;
         }
 
-        /* Uniform responsive configuration for profile pictures */
         .profile-pic-dynamic {
             width: 100%;
             max-width: 320px;
@@ -130,7 +129,6 @@
             flex-shrink: 0;
         }
 
-        /* Special style targeting pic2 to keep it close to your original look */
         .profile-pic-dynamic.type-2 {
             max-width: 400px;
             aspect-ratio: 4 / 3;
@@ -146,7 +144,7 @@
             min-width: 280px;
         }
 
-        /* --- Grid/List Layouts & Project Images --- */
+        /* --- Grid Layout for Projects --- */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -180,9 +178,49 @@
             font-size: 1.4rem;
         }
 
-        /* --- Links & Buttons --- */
+        /* --- Connect & Contact Section --- */
         .links-section {
             text-align: center;
+        }
+
+        .contact-card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px auto 10px auto;
+            max-width: 700px;
+        }
+
+        .contact-badge {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            padding: 15px 25px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 250px;
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-badge strong {
+            color: #38bdf8;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-badge a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-badge a:hover {
+            color: #38bdf8;
         }
 
         .btn-group {
@@ -225,25 +263,21 @@
             width: 100%;
             max-width: 600px;
             height: auto;
-            margin-top: 20px;
+            margin: 30px auto 0 auto;
             border-radius: 6px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: block;
         }
 
         footer {
             text-align: center;
-            padding: 60px 0 20px 0;
+            padding: 40px 0 20px 0;
             color: #64748b;
             font-size: 0.9rem;
             border-top: 1px solid #334155;
         }
-        
-        footer p {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
 
-        /* --- Media Queries for Responsive Design (Mobile Devices) --- */
+        /* --- Media Queries for Mobile Responsiveness --- */
         @media (max-width: 768px) {
             .intro-container h1 {
                 font-size: 2.8rem;
@@ -262,13 +296,13 @@
             }
 
             .about-wrapper, .reverse-layout {
-                flex-direction: column; /* Stack image and text vertically */
+                flex-direction: column; 
                 text-align: center;
                 gap: 20px;
             }
 
             .profile-pic-dynamic, .profile-pic-dynamic.type-2 {
-                max-width: 260px; /* Keep pictures appropriately sized on phones */
+                max-width: 260px; 
                 margin: 0 auto;
             }
 
@@ -355,392 +389,30 @@
 
             <section id="connect" class="links-section">
                 <h2>Let's Connect</h2>
-                <p>Feel free to check out my professional profiles or view my complete resume below.</p>
-                <div class="btn-group">
-                    <a href="sam resume.pdf" class="btn secondary" target="_blank">View Resume</a>
-                    <a href="https://www.linkedin.com/in/sambit-kumar-sahoo-795682321" class="btn secondary" target="_blank">LinkedIn Profile</a>
-                    <a href="https://github.com/sambitsahoo089" class="btn secondary" target="_blank">GitHub Profile</a>
-                </div>
-            </section>
-
-            <footer>
-                <p>&copy; 2026 Personal Webpage. All rights reserved.</p>
-                <p><strong>CONTACT ME</strong></p>
-                <p><strong>+91 7008604190 | sambitkusahoo089@gmail.com</strong></p>
-                <img src="coverimage.png" alt="Footer Cover Illustration" class="footer-banner">
-            </footer>
-
-        </div>
-    </div>
-
-</body>
-</html>charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Webpage</title>
-    <style>
-        /* --- Reset & Global Styles --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0f172a; /* Changed from light green to match main dark theme */
-            color: #f8fafc;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        /* --- Scroll-Activated Introduction Graphic Effect --- */
-        .intro-container {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(135deg, #1b104a 0%, #0f172a 100%); 
-            padding: 20px;
-            z-index: 1;
-        }
-
-        .intro-container h1 {
-            font-size: 4rem; /* Scaled down slightly for default/desktop */
-            line-height: 1.1;
-            margin-bottom: 20px;
-            font-family: 'Times New Roman', serif;
-            font-weight: 900;
-            color: #96e080;
-        }
-
-        .intro-container p {
-            font-size: 1.8rem;
-            color: #7296c5;
-            max-width: 800px;
-            font-family: 'Times New Roman', serif;
-            font-weight: 800;
-            margin-bottom: 30px;
-        }
-
-        .scroll-hint {
-            font-size: 1.5rem;
-            color: #319bbebf;
-            font-family: 'Times New Roman', serif;
-            font-weight: 800;
-            animation: bounce 1s infinite;
-            margin-top: 20px;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        /* --- Main Content Layout --- */
-        .main-content {
-            position: relative;
-            z-index: 3;
-            background-color: #0f172a;
-            box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.5);
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        section {
-            padding: 60px 0;
-            border-bottom: 1px solid #334155;
-        }
-
-        section:last-child {
-            border-bottom: none;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: #38bdf8;
-            margin-bottom: 30px;
-            border-left: 4px solid #38bdf8;
-            padding-left: 20px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #cbd5e1;
-            margin-bottom: 15px;
-        }
-
-        /* --- About Section with Profile Pictures --- */
-        .about-wrapper {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        
-        .about-wrapper:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Uniform responsive configuration for profile pictures */
-        .profile-pic-dynamic {
-            width: 100%;
-            max-width: 320px;
-            height: auto;
-            aspect-ratio: 3 / 4;
-            border-radius: 10%;
-            object-fit: cover;
-            border: 4px solid #38bdf8;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            flex-shrink: 0;
-        }
-
-        /* Special style targeting pic2 to keep it close to your original look */
-        .profile-pic-dynamic.type-2 {
-            max-width: 400px;
-            aspect-ratio: 4 / 3;
-            border-color: #39bdf8;
-        }
-
-        .reverse-layout {
-            flex-direction: row-reverse;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        /* --- Grid/List Layouts & Project Images --- */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .card {
-            background-color: #1e293b;
-            border-radius: 8px;
-            border: 1px solid #334155;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 1px solid #334155;
-        }
-
-        .card-content {
-            padding: 25px;
-        }
-
-        .card h3 {
-            color: #f1f5f9;
-            margin-bottom: 12px;
-            font-size: 1.4rem;
-        }
-
-        /* --- Links & Buttons --- */
-        .links-section {
-            text-align: center;
-        }
-
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            background-color: #38bdf8;
-            color: #0f172a;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0ea5e9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
-        }
-
-        .btn.secondary {
-            background-color: #334155;
-            color: #f8fafc;
-            border: 1px solid #475569;
-        }
-
-        .btn.secondary:hover {
-            background-color: #475569;
-        }
-
-        /* --- Footer Cover Graphic --- */
-        .footer-banner {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 0 20px 0;
-            color: #64748b;
-            font-size: 0.9rem;
-            border-top: 1px solid #334155;
-        }
-        
-        footer p {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        /* --- Media Queries for Responsive Design (Mobile Devices) --- */
-        @media (max-width: 768px) {
-            .intro-container h1 {
-                font-size: 2.8rem;
-            }
-
-            .intro-container p {
-                font-size: 1.4rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .about-wrapper, .reverse-layout {
-                flex-direction: column; /* Stack image and text vertically */
-                text-align: center;
-                gap: 20px;
-            }
-
-            .profile-pic-dynamic, .profile-pic-dynamic.type-2 {
-                max-width: 260px; /* Keep pictures appropriately sized on phones */
-                margin: 0 auto;
-            }
-
-            h2 {
-                border-left: none;
-                border-bottom: 3px solid #38bdf8;
-                padding-left: 0;
-                padding-bottom: 8px;
-                display: inline-block;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="intro-container">
-        <h1>Welcome to My Space</h1>
-        <p><strong>I am a passionate developer and tech enthusiast building clean, functional experiences.</strong></p>
-        <div class="scroll-hint">Scroll Down to Explore ↓</div>
-    </div>
-
-    <div class="main-content">
-        <div class="container">
-
-            <section id="about">
-                <h2>About Me</h2>
-                <div class="about-wrapper">
-                    <img src="MYSELF.jpeg" alt="Sambit Kumar Sahoo" class="profile-pic-dynamic">
-                    <div class="about-text">
-                        <p>I Sambit Kumar Sahoo Pursuing my B.Tech Degree from Institute of Technical Education & Research(ITER), SoA University, Bhubaneswar. Driven by a passion for software engineering and web development, I maintain a solid academic foundation with a current CGPA of 7.76 (Expected Graduation: 2028).</p>
-                        <p>I Believe in Learning by Doing. I have successfully completed an Academic web development project where I integrated HTML, CSS & JavaScript to Build practical, functional applications.</p>
-                        <p>I am highly motivated and eagerly seeking internship opportunities, collaborative projects, & hands on work where i can apply my technical knowledge to real-world environments, solve meaningful problems, & grow as a software professional.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="career">
-                <h2>Career & Education</h2>
-                <div class="about-wrapper reverse-layout">
-                    <img src="education.jpeg" alt="Education History" class="profile-pic-dynamic type-2">
-                    <div class="about-text">
-                        <p><strong>B.Tech in Engineering</strong> | ITER, SOA University (2024 – Present)</p>
-                        <p>Maintained a current CGPA of 7.76 through the first two years of coursework. Expected graduation: 2028.</p>
-                        <p><strong>Higher Secondary & Secondary Education</strong> | Shree Dadiji Mandir Trust Prabhabati Public School</p>
-                        <p>Achieved 75% in 12th Boards and 80% in 10th Boards.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="hobbies">
-                <h2>Hobbies & Interests</h2>
+                <p>Feel free to reach out directly or check out my professional networks and resume below.</p>
                 
-                <div class="about-wrapper">
-                    <img src="CRIC.png" alt="Cricket Activity" class="profile-pic-dynamic">
-                    <div class="about-text">
-                        <p>Outside of tech, cricket is a massive part of my life. I have represented my U-16 district at the competitive level under the Odisha Cricket Association (OCA) and was proud to be part of the championship-winning team for the Odisha School Tournament for Titilagarh Team, in Balangir district. Currently, I am keeping my focus sharp and training hard to make my mark and participate in the upcoming OCA Under-23 tournament.</p>
+                <div class="contact-card-container">
+                    <div class="contact-badge">
+                        <strong>Call or WhatsApp</strong>
+                        <a href="tel:+917008604190">+91 7008604190</a>
                     </div>
-                </div>  
-
-                <div class="about-wrapper reverse-layout">
-                    <img src="song.jpg" alt="Singing Passion" class="profile-pic-dynamic">
-                    <div class="about-text">
-                        <p>Beyond coding and sports, singing is where I find my creative freedom. Music has always been a powerful escape for me, allowing me to connect with different emotions and expressions. Whether I am casually humming along to my favorite tracks or diving into vocal melodies, singing is my favorite way to unwind, stay inspired, and recharge my creative energy.</p>
-                    </div>
-                </div>  
-            </section>
-
-            <section id="projects">
-                <h2>Group Projects</h2>
-                <div class="grid">
-                    <div class="card">
-                        <img src="SPENDSENSE.png" alt="Project SpendSense Layout" class="project-img">
-                        <div class="card-content">
-                            <h3>Project: SPENDSENSE</h3>
-                            <p>SPENDSENSE is a glassmorphism-styled expense tracker built with HTML, CSS, & Javascript that runs entirely in the browser using localstorage for complete data privacy.</p>
-                            <p>For students, it simplifies budgeting by tracking limited allowances against daily habits like food deliveries and travel, helping to prevent mid-month deficits.</p>
-                            <p>For employees, it offers instant clarity on recurring bills, balances monthly salary baselines, and flags lifestyle creep using dynamic canvas donut charts.</p>
-                            <p>By turning dry financial logs into interactive progress bars, SPENDSENSE helps both groups monitor their personal cash flow and maintain financial discipline effortlessly.</p>
-                            <p style="font-size: 0.95rem; color: #38bdf8; margin-top: 15px;">* You can view the project by clicking my GitHub link below *</p>
-                        </div>
+                    <div class="contact-badge">
+                        <strong>Email Address</strong>
+                        <a href="mailto:sambitkusahoo089@gmail.com">sambitkusahoo089@gmail.com</a>
                     </div>
                 </div>
-            </section>
 
-            <section id="connect" class="links-section">
-                <h2>Let's Connect</h2>
-                <p>Feel free to check out my professional profiles or view my complete resume below.</p>
                 <div class="btn-group">
                     <a href="sam resume.pdf" class="btn secondary" target="_blank">View Resume</a>
                     <a href="https://www.linkedin.com/in/sambit-kumar-sahoo-795682321" class="btn secondary" target="_blank">LinkedIn Profile</a>
                     <a href="https://github.com/sambitsahoo089" class="btn secondary" target="_blank">GitHub Profile</a>
                 </div>
+
+                <img src="coverimage.png" alt="Footer Cover Illustration" class="footer-banner">
             </section>
 
             <footer>
                 <p>&copy; 2026 Personal Webpage. All rights reserved.</p>
-                <p><strong>CONTACT ME</strong></p>
-                <p><strong>+91 7008604190 | sambitkusahoo089@gmail.com</strong></p>
-                <img src="coverimage.png" alt="Footer Cover Illustration" class="footer-banner">
             </footer>
 
         </div>
